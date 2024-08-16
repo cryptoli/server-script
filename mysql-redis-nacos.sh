@@ -257,7 +257,7 @@ install_nacos() {
     cat <<EOT >> /usr/local/nacos-server/conf/application.properties
 spring.datasource.platform=mysql
 db.num=1
-db.url.0=jdbc:mysql://${mysql_host}:${mysql_port}/${nacos_db_name}?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+db.url.0=jdbc:mysql://${mysql_host}:${mysql_port}/${nacos_db_name}?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
 db.user=${nacos_db_user}
 db.password=${nacos_db_password}
 EOT
